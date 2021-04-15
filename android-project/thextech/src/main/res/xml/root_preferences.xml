@@ -1,0 +1,53 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="@string/setup_general_cat">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="enable_frame_skip"
+            android:title="@string/settings_enable_frameskip" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="disable_sound"
+            android:title="@string/setup_disable_sound" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/setup_control_cat">
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/touchscreenControllerTypes"
+            android:entryValues="@array/touchscreenControllerTypesValues"
+            android:key="setup_touchscreen_mode"
+            android:title="@string/setup_touchscreen_mode" />
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/touchPadStyles"
+            android:entryValues="@array/touchPadStylesValues"
+            android:key="setup_touchscreen_style"
+            android:title="@string/setup_touchpad_style" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="touchscreen_gamepad_showalways"
+            android:title="@string/setup_touchscreen_alwaysshow" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/setup_display_cat">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="show_fps"
+            android:title="@string/setup_show_framerate" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="enable_max_fps"
+            android:title="@string/setup_max_framerate_mode" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/setup_speedrunner">
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/speedRunModes"
+            android:entryValues="@array/speedRunModesValues"
+            android:key="setup_speedRunMode"
+            android:title="@string/setup_sr_speedrunMode" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="setup_sr_showStopwatchTransparent"
+            android:title="@string/setup_sr_stopwatchSemiTransparent" />
+    </PreferenceCategory>
+</PreferenceScreen>
